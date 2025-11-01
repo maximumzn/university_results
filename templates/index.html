@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جامعة العاصمة الأهلية - نتائج الطلبة</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo" onclick="toggleLoginMenu()">🎓 جامعة العاصمة الأهلية</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <nav id="sideMenu" class="side-menu">
+        <a href="#" onclick="showSection('about')">نبذة عن الجامعة</a>
+        <a href="#" onclick="showSection('departments')">الأقسام</a>
+        <a href="#" onclick="showSection('news')">أخبار الجامعة</a>
+    </nav>
+
+    <div id="loginMenu" class="login-menu">
+        <a href="/student">تسجيل دخول طالب</a>
+        <a href="/admin">تسجيل دخول إداري</a>
+    </div>
+
+    <main>
+        <section id="about" class="active">
+            <h2>نبذة عن الجامعة</h2>
+            <p id="aboutText">جامعة العاصمة الأهلية هي مؤسسة تعليمية تهدف إلى إعداد كوادر مؤهلة في مجالات الإدارة والمحاسبة والقانون وتكنولوجيا المعلومات.</p>
+        </section>
+
+        <section id="departments">
+            <h2>الأقسام الأكاديمية</h2>
+            <ul>
+                <li>قسم المحاسبة</li>
+                <li>قسم الإدارة</li>
+                <li>قسم القانون</li>
+                <li>قسم تكنولوجيا المعلومات (IT)</li>
+            </ul>
+        </section>
+
+        <section id="news">
+            <h2>أخبار الجامعة</h2>
+            <div id="newsContent">
+                <p>🔹 تم فتح باب التسجيل للفصل الدراسي الجديد.</p>
+                <p>🔹 إعلان نتائج الفصل الثاني قريبًا.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 جامعة العاصمة الأهلية - جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
