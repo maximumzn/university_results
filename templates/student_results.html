@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>نتيجة الطالب</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="results-container">
+    <h2>نتيجة الطالب</h2>
+    <p><strong>الاسم:</strong> {{ student["الاسم_الكامل"] }}</p>
+    <p><strong>رقم القيد:</strong> {{ student["رقم_القيد"] }}</p>
+    <p><strong>التخصص:</strong> {{ student["التخصص"] }}</p>
+    <p><strong>الفصل:</strong> {{ student["الفصل"] }}</p>
+    <p><strong>المعدل:</strong> {{ student["المعدل"] }}%</p>
+    <p><strong>الحالة:</strong> {{ student["الحالة"] }}</p>
+</div>
+
+</body>
+</html>
